@@ -1,7 +1,7 @@
 <?php
 $access_token = 'sqYdmIKK/35tvT/r+6l8npx4rv4FQAvdaXY8/biG7Kb7tmPn3jKfWRnNQvvDJe72+K7KU+YHLB6yVk27fM00JtycqpXEkPnRoJnUnOB91boOSx8R+sf1GoKyS2A4fuJ6nLwAhnuHndle0weoek4McQdB04t89/1O/w1cDnyilFU=';
 
-$url = 'http://immense-chamber-72779.herokuapp.com/verify.php';
+$url = '	https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
