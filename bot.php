@@ -21,10 +21,9 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text
 			];
-			/*$json_string = file_get_contents('php://input');
-			$jsonObj = json_decode($json_string);
-			$textja = $jsonObj->{"result"}[0]->{"content"}->{"text"};*/
-			//if($textja == "จัดไป"){
+			$jsonObj = json_decode($content);
+			$textja = $jsonObj->{"result"}[0]->{"content"}->{"text"};
+			if($textja == "จัดไป"){
 				// Make a POST Request to Messaging API to reply to sender
 				$url = 'https://api.line.me/v2/bot/message/reply';
 				$data = [
@@ -44,7 +43,7 @@ if (!is_null($events['events'])) {
 				curl_close($ch);
 
 				echo $result . "\r\n";
-			//}
+			}
 		}
 	}
 }
