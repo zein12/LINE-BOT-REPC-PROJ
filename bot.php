@@ -25,12 +25,12 @@ if (!is_null($events['events'])) {
 			
 			if($text == "แชร์ดิ")
 			{
-				$ch1 = curl_init(); 
-				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
-				curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch1, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]); 
+				$ch = curl_init(); 
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+				curl_setopt($ch, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]); 
 				
-				$result1 = curl_exec($ch1); curl_close($ch1); 
+				$result = curl_exec($ch); curl_close($ch); 
 				
 				foreach($obj['query']['pages'] as $key => $val){ 
 					$result_text = $val['extract']; 
