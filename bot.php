@@ -22,15 +22,18 @@ if (!is_null($events['events'])) {
 					//'text' => $text
 					'text' => 'ทดลองอยู่'
 				];
+			$jsonObj = json_decode($text);
+			$textja = $jsonObj->{"result"}[0]->{"content"}->{"text"};
+			$text_ex = explode(':', $textja);
 			
-			if($event['message']['text'] == 'แชร์ดิ')
+			if($text_ex[0] == 'แชร์ดิ')
 			{
-				$ch = curl_init(); 
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]); 
+				$ch1 = curl_init(); 
+				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
+				curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
+				curl_setopt($ch1, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]); 
 				
-				$result = curl_exec($ch); curl_close($ch); 
+				$result = curl_exec($ch1); curl_close($ch1); 
 				
 				foreach($obj['query']['pages'] as $key => $val){ 
 					$result_text = $val['extract']; 
