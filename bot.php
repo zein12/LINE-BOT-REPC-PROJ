@@ -43,16 +43,16 @@ if (!is_null($events['events'])) {
 				
 				$post_data = ["to"=>[$to],"toChannel"=>"1383378250","eventType"=>"138311608800106203","content"=>$response_format_text]; //ส่งข้อมูลไป 
 				$ch = curl_init("https://trialbot-api.line.me/v1/events"); 
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+				
 				curl_setopt($ch, CURLOPT_POST, true); 
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); 
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 				curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data)); 
-				curl_setopt($ch, CURLOPT_HTTPHEADER, array( 
-					'Content-Type: application/json; charser=UTF-8', 
-					'X-Line-ChannelID: YOUR ChannelID', 
-					'X-Line-ChannelSecret: YOUR ChannelSecret', 
-					'X-Line-Trusted-User-With-ACL: YOUR MID' )); 
-				$result = curl_exec($ch); curl_close($ch); 
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				
+				$result = curl_exec($ch); 
+				curl_close($ch); 
 				
 			}
 				// Make a POST Request to Messaging API to reply to sender
