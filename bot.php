@@ -21,7 +21,8 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text
 			];
-			$jsonObj = json_decode($text);
+			$json_string = file_get_contents('php');
+			$jsonObj = json_decode($json_string);
 			$textja = $jsonObj->{"result"}[0]->{"content"}->{"text"};
 			if($textja == "จัดไป"){
 				// Make a POST Request to Messaging API to reply to sender
