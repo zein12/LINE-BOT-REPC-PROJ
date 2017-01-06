@@ -15,15 +15,7 @@ if (!is_null($events['events'])) {
 				$text = $event['message']['text'];
 				// Get replyToken
 				$replyToken = $event['replyToken'];
-			if($text == "แชร์ดิ")
-			{
-				$ch1 = curl_init(); 
-				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
-				curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch1, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]); 
-				
-				$result1 = curl_exec($ch1); curl_close($ch1); - See more at: https://www.programmerthailand.com/tutorial/post/view/163/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-line-bot-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%83%E0%B8%8A%E0%B9%89-curl-%E0%B9%83%E0%B8%99-yii-framework-2#sthash.pCqw8931.dpuf
-			}
+			
 				// Build message to reply back
 				$messages = [
 					'type' => 'text',
