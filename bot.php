@@ -20,10 +20,10 @@ if (!is_null($events['events'])) {
 				$messages = [
 					'type' => 'text',
 					//'text' => $text
-					'text' => "ทดลองอยู่"
+					'text' => 'ทดลองอยู่'
 				];
 			
-			if($event['message']['text'] == "แชร์ดิ")
+			if($event['message']['text'] == 'แชร์ดิ')
 			{
 				$ch = curl_init(); 
 				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
