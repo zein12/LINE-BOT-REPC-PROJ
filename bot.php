@@ -49,8 +49,8 @@ if (!is_null($events['events'])) {
 				
 				/*$data = [
 					'replyToken' => $replyToken,
-					'messages'=>[$messages],*/
-				]; //ส่งข้อมูลไป 
+					'messages'=>[$messages],
+				];*/ //ส่งข้อมูลไป 
 				
 				
 			}
