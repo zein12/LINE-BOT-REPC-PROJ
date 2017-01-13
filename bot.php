@@ -49,11 +49,11 @@ if (!is_null($events['events'])) {
 				$ch = curl_init($url);
 				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 				
+				curl_setopt($ch, CURLOPT_POST, true);
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); 
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 				curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data)); 
 				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 				
 				$result = curl_exec($ch); 
 				curl_close($ch); 
