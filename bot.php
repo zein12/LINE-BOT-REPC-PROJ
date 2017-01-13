@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 				} 
 					$messages = [
 						'type'=>'text',
-						'text'=>'ไหวป่าว'
+						'text'=>$result_text
 						];
 				
 				/*$data = [
