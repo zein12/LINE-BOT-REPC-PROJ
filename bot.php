@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			];
 			//$jsonObj = json_decode($content);
 			//$textja = $jsonObj->{"result"}[0]->{"content"}->{"text"};
-			if($event['message']['text'] == 'จัดไป'){
+			if($event['message']['text'] >= 'จัดไป'){
 				$messages = [
 				'type' => 'text',
 				'text' => 'เดี๋ยวจัดให้'
