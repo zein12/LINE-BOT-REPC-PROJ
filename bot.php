@@ -42,13 +42,15 @@ if (!is_null($events['events'])) {
 				if(empty($result_text)){//หาจาก en ไม่พบก็บอกว่า ไม่พบข้อมูล ตอบกลับไป 
 					$result_text = 'ไม่พบข้อมูล'; 
 				} 
-					$response_format_text = ['Type'=>'text',
-								 'text'=>'ไหวป่าว'
-								];
+					$messages = [
+						'Type'=>'text',
+						'text'=>'ไหวป่าว'
+						];
 				
-				$post_data = ['replyToken' => $replyToken,
-					      'messages'=>[$response_format_text],
-					     ]; //ส่งข้อมูลไป 
+				$data = [
+					'replyToken' => $replyToken,
+					'messages'=>[$messages],
+				]; //ส่งข้อมูลไป 
 				
 				
 			}
