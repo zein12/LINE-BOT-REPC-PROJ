@@ -39,8 +39,10 @@ if (!is_null($events['events'])) {
 				foreach($obj['query']['pages'] as $key => $val){ 
 					$result_text = $val['extract']; 
 				}
-				
-				$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>$result_text]; 
+				if(empty($result_text)){//หาจาก en ไม่พบก็บอกว่า ไม่พบข้อมูล ตอบกลับไป 
+					$result_text = 'ไม่พบข้อมูล'; 
+				} 
+					$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>$result_text];
 				
 				$post_data = $response_format_text; //ส่งข้อมูลไป 
 				$url = 'https://api.line.me/v2/bot/message/reply';
