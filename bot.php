@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 					$result_text = 'ไม่พบข้อมูล'; 
 				} 
 					$messages = [
-						'Type'=>'text',
+						'type'=>'text',
 						'text'=>'ไหวป่าว'
 						];
 				
