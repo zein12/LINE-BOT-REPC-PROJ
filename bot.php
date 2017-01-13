@@ -45,12 +45,9 @@ if (!is_null($events['events'])) {
 					$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>$result_text];
 				
 				$post_data = ["to"=>[$to],"toChannel"=>"1383378250","eventType"=>"138311608800106203","content"=>$response_format_text]; //ส่งข้อมูลไป 
-				$url = 'https://trialbot-api.line.me/v1/events';
+				$url = 'https://api.line.me/v2/bot/message/reply';
 				$ch = curl_init($url);
-				$headers = array('Content-Type: application/json; charser=UTF-8',
-						 'X-Line-ChannelID: YOUR ChannelID', 
-						 'X-Line-ChannelSecret: YOUR ChannelSecret', 
-						 'X-Line-Trusted-User-With-ACL: YOUR MID');
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 				
 				curl_setopt($ch, CURLOPT_POST, true);
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); 
