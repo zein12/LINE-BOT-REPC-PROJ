@@ -49,25 +49,11 @@ if (!is_null($events['events'])) {
 				$post_data = ['replyToken' => $replyToken,
 					      'messages'=>[$response_format_text],
 					     ]; //ส่งข้อมูลไป 
-				$url = 'https://api.line.me/v2/bot/message/reply';
-				$ch = curl_init($url);
-				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-				$post = json_encode($post_data);
 				
-				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); 
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
-				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-				
-				$result = curl_exec($ch); 
-				curl_close($ch); 
-				
-				echo $result . "\r\n";
 				
 			}
 				// Make a POST Request to Messaging API to reply to sender
-			/*	$url = 'https://api.line.me/v2/bot/message/reply';
+				$url = 'https://api.line.me/v2/bot/message/reply';
 				$data = [
 					'replyToken' => $replyToken,
 					'messages' => [$messages],
@@ -84,7 +70,7 @@ if (!is_null($events['events'])) {
 				$result = curl_exec($ch);
 				curl_close($ch);
 
-				echo $result . "\r\n";*/
+				echo $result . "\r\n";
 			
 		}
 	}
