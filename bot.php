@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 				foreach($obj['query']['pages'] as $key => $val){ 
 					$result_text = $val['extract']; 
 				}
-				if(empty($result_text)){//หาจาก en ไม่พบก็บอกว่า ไม่พบข้อมูล ตอบกลับไป 
+				if(empty($result_text)){
 					$result_text = 'ไม่พบข้อมูล'; 
 				} 
 					$messages = [
@@ -47,9 +47,9 @@ if (!is_null($events['events'])) {
 						'text'=>'ไหวป่าว'
 						];
 				
-				$data = [
+				/*$data = [
 					'replyToken' => $replyToken,
-					'messages'=>[$messages],
+					'messages'=>[$messages],*/
 				]; //ส่งข้อมูลไป 
 				
 				
