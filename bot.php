@@ -52,10 +52,11 @@ if (!is_null($events['events'])) {
 				$url = 'https://api.line.me/v2/bot/message/reply';
 				$ch = curl_init($url);
 				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+				$post = json_encode($post_data);
 				
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); 
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data)); 
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $post); 
 				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 				
