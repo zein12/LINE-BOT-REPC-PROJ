@@ -15,7 +15,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
+			$text_ex = "กล้วย";
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 				$ch1 = curl_init(); 
 				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
 				curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch1, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=''กล้วย'); 
+				curl_setopt($ch1, CURLOPT_URL, 'https://th.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex); 
 				$result1 = curl_exec($ch1); 
 				curl_close($ch1); 
 				$obj = json_decode($result1, true); 
