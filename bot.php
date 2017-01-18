@@ -4,6 +4,14 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 
 //SQL
 $db = new MysqliDb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENG', 'PlantHistorianDB');
+if($db)
+{
+	echo "Database Connected.\r\n"
+}
+else
+{
+	echo "Database Connect Failed.\r\n";
+}
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -81,5 +89,5 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "Oho";
+echo "Oho\r\n";
 echo "OK";
