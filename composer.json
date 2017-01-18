@@ -34,7 +34,6 @@
         "symfony/filesystem": "^2.7 || ^3.0",
         "seld/phar-utils": "^1.0",
         "seld/cli-prompt": "^1.0",
-        "thybag/php-sharepoint-lists-api": "dev-develop",
         "psr/log": "^1.0"
     },
     "require-dev": {
