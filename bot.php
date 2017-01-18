@@ -81,4 +81,5 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+echo "Oho";
 echo "OK";
