@@ -7,9 +7,6 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 $db = new Mysqlidb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENG', 'PlantHistorianDB');
 if(!$db) die("Database error");
 
-$users = $db->rawQueryOne ('select * from REPCO.DCSHealthData where Tag=?', Array(10));
-echo $users['Value'];
-
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
