@@ -4,6 +4,7 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 
 //SQL
 $db = new MysqliDb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENGOOO', 'PlantHistorianDB');
+if(!$db) die("Database error");
 
 // Get POST body content
 $content = file_get_contents('php://input');
