@@ -5,9 +5,10 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 
 //SQL
 $db = new Mysqlidb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENG', 'PlantHistorianDB');
+$db->setPrefix ('REPCO.');
 if(!$db) die("Database error");
 
-$RData = $db->rawQueryOne('SELECT Tag from REPCO TagData',Array (10));
+$RData = $db->rawQueryOne('SELECT Tag from TagData',Array (10));
 
 // Get POST body content
 $content = file_get_contents('php://input');
