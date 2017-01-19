@@ -1,5 +1,5 @@
 <?php
-require_once ('MysqliDb.php');
+//require_once ('MysqliDb.php');
 
 $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCpf+K7KU+YHLB6yVk27fM00JtycqpXEkPnRoJnUnOB91bqX3p9+U2mCdRHPP2Cd0ehAhkN4lL9tzrk4fhG31pC9ygdB04t89/1O/w1cDnyilFU=';
 
@@ -7,7 +7,7 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 $db = new Mysqlidb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENG', 'PlantHistorianDB');
 if(!$db) die("Database error");
 
-$RData = $db->rawQueryOne('SELECT Tag from REPCO.DCSHealthData',Array (10));
+//$RData = $db->rawQueryOne('SELECT Tag from REPCO.DCSHealthData',Array (10));
 
 // Get POST body content
 $content = file_get_contents('php://input');
