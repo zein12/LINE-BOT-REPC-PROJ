@@ -10,8 +10,13 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 $db = new Mysqlidb ('localhost', 'root', '0863753614', 'NickyTest');
 if(!$db) die("Database error");
 
-$RData = $db->rawQueryOne('SELECT Name from omg where ID=2',Array (10));
+//$RData = $db->rawQueryOne('SELECT Name from omg where ID=2',Array (10));
 //$RData = $db->rawQueryOne('SELECT Tag from TagData',Array (10));
+
+$users = $db->rawQuery('SELECT * from omg where id >=1', Array (10));
+foreach ($users as $user) {
+    print_r ($user);
+}
 
 // Get POST body content
 $content = file_get_contents('php://input');
