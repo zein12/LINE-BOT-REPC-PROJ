@@ -4,9 +4,9 @@
 
 $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCpf+K7KU+YHLB6yVk27fM00JtycqpXEkPnRoJnUnOB91bqX3p9+U2mCdRHPP2Cd0ehAhkN4lL9tzrk4fhG31pC9ygdB04t89/1O/w1cDnyilFU=';
 
-$serverName = "CHEMRYDBWH01\APP";
+/*$serverName = "CHEMRYDBWH01\APP";
 $connectionInfo = array( "Database"=>"PlantHistorianDB", "UID"=>"ICENG", "PWD"=>"IC2123ENG");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$conn = sqlsrv_connect( $serverName, $connectionInfo);*/
 //SQL
 //$db = new Mysqlidb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENG', 'PlantHistorianDB');
 //$db->setPrefix ('REPCO.');
