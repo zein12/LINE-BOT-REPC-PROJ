@@ -7,7 +7,7 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 $db = new Mysqlidb ('CHEMRYDBWH01\APP', 'ICENG', 'IC2123ENG', 'PlantHistorianDB');
 if(!$db) die("Database error");
 
-$RData = $db->rawQueryOne('SELECT Tag from REPCO.TagData where Value=0',Array (30));
+$RData = $db->rawQueryOne('SELECT Value from [REPCO].[TagData] where Tag=P3-FIA3102',Array (10));
 
 // Get POST body content
 $content = file_get_contents('php://input');
