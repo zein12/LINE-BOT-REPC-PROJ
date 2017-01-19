@@ -9,7 +9,7 @@ $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCp
 //$db->setPrefix ('REPCO.');
 $db = new Mysqlidb ('localhost', 'root', '0863753614', 'NickyTest');
 if(!$db) die("Database error");
-$db->connect();
+$db->setPrefix ('NickyTest_');
 
 $RData = $db->rawQueryOne('SELECT Name from omg where ID=2',Array(10));
 //$RData = $db->rawQueryOne('SELECT Tag from TagData',Array(10));
