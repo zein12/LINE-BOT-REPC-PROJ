@@ -1,5 +1,6 @@
 <?php
 require_once ('MysqliDb.php');
+require_once ('dbObject.php');
 
 $access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCpf+K7KU+YHLB6yVk27fM00JtycqpXEkPnRoJnUnOB91bqX3p9+U2mCdRHPP2Cd0ehAhkN4lL9tzrk4fhG31pC9ygdB04t89/1O/w1cDnyilFU=';
 
@@ -10,7 +11,6 @@ $db = new Mysqlidb ('localhost', 'root', '0863753614', 'NickyTest');
 if(!$db) die("Database error");
 
 $RData = $db->rawQueryOne('SELECT Name from omg where ID=2',Array (10));
-echo $Rdata['Name'];
 //$RData = $db->rawQueryOne('SELECT Tag from TagData',Array (10));
 
 // Get POST body content
