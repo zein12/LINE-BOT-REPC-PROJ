@@ -2,7 +2,7 @@
 //require_once ('MysqliDb.php');
 //require_once ('dbObject.php');
 
-$access_token = 'ziHTzV/2zzN+9EA0rEWnzfSBmoteGy4awfNS3TR3aJwttGI7gEfrbSJN1rWvcCpf+K7KU+YHLB6yVk27fM00JtycqpXEkPnRoJnUnOB91bqX3p9+U2mCdRHPP2Cd0ehAhkN4lL9tzrk4fhG31pC9ygdB04t89/1O/w1cDnyilFU=';
+$access_token = '3/cEBpOR0mjAMUtnHKrSrx3N6FnMVNPYfXBIwMO6HNGaljxuxTxZz2fGrmZYFwqfV3dvAWMa7FEGrmOONfbZ7or1wxYgpjbtFMS0Mkk+RftjvYSrUpThxAHGiivf2M662z2zM5P8BSKby0dJiBG3GQdB04t89/1O/w1cDnyilFU=';
 
 $serverName = "CHEMRYDBWH01\APP";
 $connectionInfo = array( "Database"=>"PlantHistorianDB", "UID"=>"ICENG", "PWD"=>"IC2123ENG");
@@ -39,10 +39,10 @@ if (!is_null($events['events'])) {
 			];
 			//$jsonObj = json_decode($content);
 			//$textja = $jsonObj->{"result"}[0]->{"content"}->{"text"};
-			if($event['message']['text'] == 'จัดไป'){
+			if($event['message']['text'] == 'Kembali'){
 				$messages = [
 				'type' => 'text',
-				'text' => 'เดี๋ยวจัดให้'
+				'text' => 'Tersedia'
 			];	
 				$ch1 = curl_init(); 
 				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
@@ -56,7 +56,7 @@ if (!is_null($events['events'])) {
 					$result_text = $val['extract']; 
 				}
 				if(empty($result_text)){
-					$result_text = 'ไม่พบข้อมูล'; 
+					$result_text = 'Tidak ada data'; 
 				} 
 					$messages = [
 						'type'=>'text',
